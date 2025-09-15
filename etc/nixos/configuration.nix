@@ -100,7 +100,6 @@
 	pkgs.home-manager
 	pkgs.wezterm
 	pkgs.tree
-	pkgs.git
   ];
   
   # Some programs need SUID wrappers, can be configured further or are
