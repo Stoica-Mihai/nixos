@@ -29,7 +29,7 @@ config.keys = {
     -- Split the current pane horizontally
     { key = "d", mods="CTRL|SHIFT", action=wezterm.action{SplitHorizontal={domain="CurrentPaneDomain"}}},
     -- Split the current pane vertically
-    { key = "d", mods="CTRL", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
+    { key = "h", mods="CTRL|SHIFT", action=wezterm.action{SplitVertical={domain="CurrentPaneDomain"}}},
     -- Switch to the next pane
     { key = "RightArrow", mods="CTRL", action=wezterm.action{ActivatePaneDirection="Right"}},
     -- Switch to the previous pane

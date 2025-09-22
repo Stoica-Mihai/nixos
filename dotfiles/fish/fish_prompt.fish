@@ -1,5 +1,5 @@
 function fish_prompt
-	    set -l LAST_STATUS        $status
+	set -l LAST_STATUS        $status
         set -l LAST_STATUS_STRING ""
 
         # Colors
