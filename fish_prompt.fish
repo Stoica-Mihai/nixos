@@ -13,7 +13,7 @@ function fish_prompt
         set -l BROWN   (set_color CC998D)
 
         #Headers
-        set -l VERSION (lsb_release -d -s)
+        set -l VERSION (lsb_release -d -s | tr -d '"')
         set -l TIME    (date "+%T")
         set -l USER    (whoami)
         set -l PATH    (prompt_pwd --dir-length=0)
