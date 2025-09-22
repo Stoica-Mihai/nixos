@@ -22,7 +22,7 @@ config.window_close_confirmation = 'AlwaysPrompt'
 config.font_size = 14
 
 -- Shell definition
-config.default_prog = { "/usr/bin/fish", "-l" }
+config.default_prog = { "fish", "-l" }
 
 -- Shortcuts
 config.keys = {
@@ -38,6 +38,7 @@ config.keys = {
     { key = "x", mods="CTRL", action=wezterm.action{CloseCurrentPane={confirm=true}}},
     -- Fullscreen
     { key = "f", mods="SUPER", action="ToggleFullScreen" },
+    -- Scrolling
     { key = "UpArrow", mods = "ALT", action = wezterm.action.ScrollByPage(-1) },
     { key = "DownArrow", mods = "ALT", action = wezterm.action.ScrollByPage(1) }
 }
