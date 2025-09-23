@@ -1,1 +1,1 @@
-/etc/nixos/README.md
+Config setup for my NixOS experience
