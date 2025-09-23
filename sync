@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+# Global vars
+nix_location="/etc/nixos"
+fatal() {
+	local msg=$1
+	echo "Fatal error with msg: $msg"
+	exit 1	
+}
+
+if [[ "$EUID" -ne 0 ]]; then
+	fatal "please run it as root"
+fi
+
+if [[ "$PWD" == "$nix_location" ]]; then
+	fatal "can't run the script inside '$nix_location'"
+fi
+
+echo "Copying files from '$nix_location' to '$PWD'"
+cp --update -r "$nix_location/." "$PWD"
