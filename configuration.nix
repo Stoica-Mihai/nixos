@@ -94,17 +94,17 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search <package>
-  environment.systemPackages = [
-	pkgs.podman
-	pkgs.dig
-	pkgs.python314
-	pkgs.neofetch
-	pkgs.jetbrains.idea-ultimate
-	pkgs.postman
-	pkgs.home-manager
-	pkgs.wezterm
-	pkgs.tree
-        pkgs.lsb-release
+    environment.systemPackages = with pkgs; [
+    	podman
+    	dig
+    	python314
+    	neofetch
+    	jetbrains.idea-ultimate
+    	postman
+      wezterm
+    	home-manager
+    	tree
+      lsb-release
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

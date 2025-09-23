@@ -6,5 +6,7 @@
    ./git.nix
    ./vim.nix
    ./bat.nix
+   ./fzf.nix
+   ./fish.nix
   ];
 }
