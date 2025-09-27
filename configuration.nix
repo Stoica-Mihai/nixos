@@ -105,6 +105,8 @@
     	home-manager
     	tree
       lsb-release
+      zip
+      unzip
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
