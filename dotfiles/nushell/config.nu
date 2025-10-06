@@ -18,6 +18,6 @@
 #     config nu --doc | nu-highlight | less -R
 
 $env.config.buffer_editor = "vi"
-$env.config.edit_mode = "vi"
+$env.config.edit_mode = "emacs"
 $env.config.show_banner = false
 source $"($nu.home-path)/.cargo/env.nu"
