@@ -25,7 +25,7 @@ def create_left_prompt [] {
     let time = (date now | format date '%T')
     let user = (whoami)
     let os = (open /etc/os-release | from ini | get "" | get VERSION | str trim)
-    let pwd = ($env.PWD | str replace $env.HOME '~')
+    let pwd = ($env.PWD | str replace $env.HOME ~)
 
     $"($BLUE)($user)($RESET) - ($ORANGE)($os)($RESET) - ($PURPLE)($time)($RESET) - ($BROWN)($pwd)($RESET) \n($status_code) "
 }
