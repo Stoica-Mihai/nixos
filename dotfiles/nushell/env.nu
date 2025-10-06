@@ -4,12 +4,11 @@
 # version = "0.107.0"
 
 # COLORS
-let BLUE = (ansi --escape { fg: '#4392F1' })
-let YELLOW = (ansi --escape { fg: '#F9DB6D' })
+let BLUE = (ansi blue)
 let ORANGE = (ansi --escape { fg: '#FF715B' })
-let PURPLE = (ansi --escape { fg: '#CC4BC2' })
-let GREEN = (ansi --escape { fg: '#06D6A0' })
-let RED = (ansi --escape { fg: red })
+let PURPLE = (ansi purple)
+let GREEN = (ansi green)
+let RED = (ansi red)
 let BROWN = (ansi --escape { fg: '#CC998D' })
 let RESET = (ansi reset)
 
