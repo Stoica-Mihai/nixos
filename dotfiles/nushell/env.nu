@@ -3,11 +3,7 @@
 # Installed by:
 # version = "0.107.0"
 
-# =================================================================
-# REVISED CUSTOM NU SHELL PROMPT (Using $env.VAR assignment)
-# =================================================================
-
-# 1. Define custom colors using the $env.VAR assignment
+# COLORS
 let BLUE = (ansi --escape { fg: '#4392F1' })
 let YELLOW = (ansi --escape { fg: '#F9DB6D' })
 let ORANGE = (ansi --escape { fg: '#FF715B' })
@@ -17,8 +13,7 @@ let RED = (ansi --escape { fg: red })
 let BROWN = (ansi --escape { fg: '#CC998D' })
 let RESET = (ansi reset)
 
-# 2. Define the main prompt function (No changes needed here as it already uses $env.VAR)
-# 3. Apply the function and optional prompt indicators
+# Prompt (requires nu_plugin_formats plugin) -> https://crates.io/crates/nu_plugin_formats
 def create_left_prompt [] {
     let status_code = (
         if ($env.LAST_EXIT_CODE == 0) {
@@ -39,5 +34,6 @@ def create_left_prompt [] {
     $"($BLUE)($user)($RESET) - ($ORANGE)($os)($RESET) - ($PURPLE)($time)($RESET) - ($BROWN)($pwd)($RESET) \n($status_code) ($YELLOW)~>($RESET) "
 }
 
+# Assign the prompt and clear the time on the right
 $env.PROMPT_COMMAND = { || create_left_prompt }
 $env.PROMPT_COMMAND_RIGHT = { || "" }
