@@ -6,7 +6,7 @@
 # COLORS
 let BLUE = (ansi blue)
 let ORANGE = (ansi --escape { fg: '#FF715B' })
-let PURPLE = (ansi purple)
+let YELLOW = (ansi yellow)
 let GREEN = (ansi green)
 let RED = (ansi red)
 let BROWN = (ansi --escape { fg: '#CC998D' })
@@ -26,7 +26,7 @@ def create_left_prompt [] {
     let os = (open /etc/os-release | from ini | get "".VERSION | str trim)
     let pwd = ($env.PWD | str replace $env.HOME ~)
 
-    $"($BLUE)($user)($RESET) - ($ORANGE)($os)($RESET) - ($PURPLE)($time)($RESET) - ($BROWN)($pwd)($RESET) \n($status_code) "
+    $"($BLUE)($user)($RESET) - ($ORANGE)($os)($RESET) - ($YELLOW)($time)($RESET) - ($BROWN)($pwd)($RESET) \n($status_code) "
 }
 
 # Assign the prompt and clear the time on the right
