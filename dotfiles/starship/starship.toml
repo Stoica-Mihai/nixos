@@ -1,0 +1,65 @@
+format = '''
+$username@$hostname $directory $os $time $battery $git_branch
+$sudo$character
+'''
+right_format = '''
+$aws
+'''
+
+add_newline = true
+
+[sudo]
+disabled = false
+format = "[$symbol]($style)"
+symbol = "🔓"
+
+[hostname]
+disabled = false
+ssh_only = false
+format = "[$hostname]($style)"
+
+[battery]
+disabled = false
+charging_symbol = '⚡️'
+format = "with [$symbol$percentage]($style)"
+
+[[battery.display]]
+threshold = 100
+style = "bold green"
+
+[[battery.display]]
+threshold = 50
+style = "bold yellow"
+
+[[battery.display]]
+threshold = 20
+style = "bold red"
+
+[character]
+success_symbol = '[➜](bold green)'
+error_symbol = "[➜](bold red)"
+
+[directory]
+format = "in [$path]($style)"
+style = "#F6AE2D"
+
+[os]
+disabled = false
+style = "#679436"
+format = "on [($name $codename $version)]($style)"
+
+[aws]
+disabled = false
+force_display = true
+
+[time]
+disabled = false
+style = "#255F85"
+format = 'at [$time]($style)'
+
+[username]
+disabled = false
+show_always = true
+aliases = { "mihaiclaudiu.stoica@gameloft.org" = "mcs" }
+style_user = "#F26419"
+format = "[$user]($style)"
